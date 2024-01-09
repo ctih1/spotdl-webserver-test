@@ -1,0 +1,11 @@
+<html>
+    <input id="input" type="text" placeholder="song url">
+    <button onclick="download();">Download!</button>
+</html>
+
+<script>
+    function download() {
+        url = document.getElementById("input");
+        window.location.href = `/download?url=${url.value}`
+    }
+</script>
