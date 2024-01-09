@@ -10,7 +10,7 @@ def index():
 
 @app.route("/download")
 def download():
-    subprocess.call(f"spotdl {request.args['url']}", cwd="/media/files/music")
+    subprocess.call(f"spotdl {request.args['url']}", shell=True, cwd="/media/files/music")
     return render_template("download.html")
 
-app.run(port=8080)
+app.run(host="192.168.100.45", port=8080)
